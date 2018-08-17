@@ -1,0 +1,6 @@
+framework module Pods_ParseHeroku {
+  umbrella header "Pods-ParseHeroku-umbrella.h"
+
+  export *
+  module * { export * }
+}

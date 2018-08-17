@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4991F12C193234B244673925 /* Pods_ParseHeroku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29B071A6F2ED46BAC2D4C8E /* Pods_ParseHeroku.framework */; };
 		B32A3C51212772C9004844BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3C50212772C9004844BA /* AppDelegate.swift */; };
 		B32A3C53212772C9004844BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3C52212772C9004844BA /* ViewController.swift */; };
 		B32A3C56212772C9004844BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32A3C54212772C9004844BA /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A5AB0543A68211DAA569920 /* Pods-ParseHeroku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseHeroku.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseHeroku/Pods-ParseHeroku.release.xcconfig"; sourceTree = "<group>"; };
+		4F93AFD17ABA84F7F3CB3C02 /* Pods-ParseHeroku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseHeroku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseHeroku/Pods-ParseHeroku.debug.xcconfig"; sourceTree = "<group>"; };
+		B29B071A6F2ED46BAC2D4C8E /* Pods_ParseHeroku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseHeroku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32A3C4D212772C9004844BA /* ParseHeroku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseHeroku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32A3C50212772C9004844BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B32A3C52212772C9004844BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4991F12C193234B244673925 /* Pods_ParseHeroku.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				B32A3C4F212772C9004844BA /* ParseHeroku */,
 				B32A3C4E212772C9004844BA /* Products */,
+				DE1F49A85C9BB4B402C326FE /* Pods */,
+				CCF3EB7A18F10F8456D46BA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = ParseHeroku;
 			sourceTree = "<group>";
 		};
+		CCF3EB7A18F10F8456D46BA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B29B071A6F2ED46BAC2D4C8E /* Pods_ParseHeroku.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE1F49A85C9BB4B402C326FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F93AFD17ABA84F7F3CB3C02 /* Pods-ParseHeroku.debug.xcconfig */,
+				1A5AB0543A68211DAA569920 /* Pods-ParseHeroku.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B32A3C5F212772CC004844BA /* Build configuration list for PBXNativeTarget "ParseHeroku" */;
 			buildPhases = (
+				43F534CBC71AA149B51CD7AE /* [CP] Check Pods Manifest.lock */,
 				B32A3C49212772C9004844BA /* Sources */,
 				B32A3C4A212772C9004844BA /* Frameworks */,
 				B32A3C4B212772C9004844BA /* Resources */,
+				4605F864AE2764CCF18BFAA2 /* [CP] Embed Pods Frameworks */,
+				E9B9273B58CC2B60EBFFDAD5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43F534CBC71AA149B51CD7AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ParseHeroku-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4605F864AE2764CCF18BFAA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ParseHeroku/Pods-ParseHeroku-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParseHeroku/Pods-ParseHeroku-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9B9273B58CC2B60EBFFDAD5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParseHeroku/Pods-ParseHeroku-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B32A3C49212772C9004844BA /* Sources */ = {
@@ -278,15 +361,13 @@
 		};
 		B32A3C60212772CC004844BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F93AFD17ABA84F7F3CB3C02 /* Pods-ParseHeroku.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VSPJ2N6B9;
 				INFOPLIST_FILE = ParseHeroku/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daniellau.ParseHeroku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +377,13 @@
 		};
 		B32A3C61212772CC004844BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A5AB0543A68211DAA569920 /* Pods-ParseHeroku.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VSPJ2N6B9;
 				INFOPLIST_FILE = ParseHeroku/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daniellau.ParseHeroku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

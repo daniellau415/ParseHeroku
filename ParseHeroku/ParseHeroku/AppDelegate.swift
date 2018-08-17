@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+  
+        Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) in
+            configuration.applicationId = "myAppId"
+            configuration.clientKey = nil
+            configuration.server = "http://yourappname.herokuapp.com/parse"
+        }))
+        
+//        if PFUser.current() != nil {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: <#T##String#>)
+//        }
         return true
     }
 
