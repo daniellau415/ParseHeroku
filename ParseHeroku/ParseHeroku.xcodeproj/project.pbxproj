@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		4991F12C193234B244673925 /* Pods_ParseHeroku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29B071A6F2ED46BAC2D4C8E /* Pods_ParseHeroku.framework */; };
 		B32A3C51212772C9004844BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3C50212772C9004844BA /* AppDelegate.swift */; };
-		B32A3C53212772C9004844BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3C52212772C9004844BA /* ViewController.swift */; };
 		B32A3C56212772C9004844BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32A3C54212772C9004844BA /* Main.storyboard */; };
 		B32A3C58212772CC004844BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32A3C57212772CC004844BA /* Assets.xcassets */; };
 		B32A3C5B212772CC004844BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32A3C59212772CC004844BA /* LaunchScreen.storyboard */; };
+		B32A3C6821279F9A004844BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3C6721279F9A004844BA /* LoginViewController.swift */; };
+		B32A3C6A2127A4AA004844BA /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3C692127A4AA004844BA /* MessageViewController.swift */; };
+		B32A3C6C2127B619004844BA /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3C6B2127B619004844BA /* MessageCell.swift */; };
+		B32A3C6E2127B79A004844BA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3C6D2127B79A004844BA /* Message.swift */; };
+		B32A3C702127B847004844BA /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3C6F2127B847004844BA /* MessageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +25,15 @@
 		B29B071A6F2ED46BAC2D4C8E /* Pods_ParseHeroku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseHeroku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32A3C4D212772C9004844BA /* ParseHeroku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseHeroku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32A3C50212772C9004844BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B32A3C52212772C9004844BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B32A3C55212772C9004844BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B32A3C57212772CC004844BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32A3C5A212772CC004844BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32A3C5C212772CC004844BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B32A3C6721279F9A004844BA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B32A3C692127A4AA004844BA /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		B32A3C6B2127B619004844BA /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		B32A3C6D2127B79A004844BA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B32A3C6F2127B847004844BA /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +70,12 @@
 			isa = PBXGroup;
 			children = (
 				B32A3C50212772C9004844BA /* AppDelegate.swift */,
-				B32A3C52212772C9004844BA /* ViewController.swift */,
 				B32A3C54212772C9004844BA /* Main.storyboard */,
+				B32A3C6D2127B79A004844BA /* Message.swift */,
+				B32A3C6F2127B847004844BA /* MessageController.swift */,
+				B32A3C6721279F9A004844BA /* LoginViewController.swift */,
+				B32A3C692127A4AA004844BA /* MessageViewController.swift */,
+				B32A3C6B2127B619004844BA /* MessageCell.swift */,
 				B32A3C57212772CC004844BA /* Assets.xcassets */,
 				B32A3C59212772CC004844BA /* LaunchScreen.storyboard */,
 				B32A3C5C212772CC004844BA /* Info.plist */,
@@ -218,7 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B32A3C53212772C9004844BA /* ViewController.swift in Sources */,
+				B32A3C6821279F9A004844BA /* LoginViewController.swift in Sources */,
+				B32A3C702127B847004844BA /* MessageController.swift in Sources */,
+				B32A3C6C2127B619004844BA /* MessageCell.swift in Sources */,
+				B32A3C6E2127B79A004844BA /* Message.swift in Sources */,
+				B32A3C6A2127A4AA004844BA /* MessageViewController.swift in Sources */,
 				B32A3C51212772C9004844BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +383,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VSPJ2N6B9;
 				INFOPLIST_FILE = ParseHeroku/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.daniellau.ParseHeroku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -383,7 +402,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7VSPJ2N6B9;
 				INFOPLIST_FILE = ParseHeroku/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.daniellau.ParseHeroku;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

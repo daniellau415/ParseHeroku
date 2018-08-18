@@ -18,10 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
   
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) in
-            configuration.applicationId = "myAppId"
-            configuration.clientKey = nil
-            configuration.server = "http://yourappname.herokuapp.com/parse"
+            configuration.applicationId = "CkRVhQoC0yyO9iw5TaVLe9TrfkJJ0RKHD3CIm3j6"
+            configuration.clientKey = "ljN7OpGUbVoKAhL8xtI1mkEn3vaG55nWXjloSsa1"
+            configuration.server = "http://learnparseheroku.herokuapp.com/parse"
         }))
+        
+        
         
 //        if PFUser.current() != nil {
 //            let storyboard = UIStoryboard(name: "Main", bundle: nil)
